@@ -33,3 +33,7 @@ After this it's just `java -jar target/raspberrypi.ledcontroller-0.0.1-SNAPSHOT.
 If you want to make it start up when the Pi boots up, then `sudo nano /etc/rc.local` and add `java -jar target/raspberrypi.ledcontroller-0.0.1-SNAPSHOT.jar &` above the last line (which is `exit 0`).
 
 If you wan't to make any changes to the setup you can override any values in the [application.properties](src/main/resources/application.properties) at startup. I.e. `java -jar -Dserver.port=9999 ...` For settings that are not in the properties file, check out [Spring Boot's reference page](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html) about common properties.
+
+# SmartThings
+
+If you want to use this with SmartThings, check out my [other repository](https://github.com/cl0udninja/raspberrypi.smartthings) with the SmartApp and Device Handler for this thing
